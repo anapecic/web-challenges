@@ -1,0 +1,9 @@
+
+.header-title{
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1rem 1rem;
+    margin-top: 2px;
+    display: inline-block;
+}
+

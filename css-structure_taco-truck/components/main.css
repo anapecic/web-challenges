@@ -1,0 +1,7 @@
+.main-subtitle{
+    background-color: var(--main-title-bg);
+    color: var(--main-text);
+    padding: 7px 9px;
+    margin-top: 0;
+    display: inline-block;
+}
