@@ -45,10 +45,12 @@ console.log(statement);
 
 // Part 5: Greeting
 const userName = "Archibald";
-const nameCoach = "coach name";
+const name = "coach name";
 
-const greeting = "Hello " + "//enter your code here" + "!";
+const greeting = "Hello " + (userName === name ? userName : name);
 
-console.log(
-  userName === nameCoach ? `Hello ${userName}` : `Hello ${nameCoach}`
-);
+// console.log(
+//   userName === nameCoach ? `Hello ${userName}` : `Hello ${nameCoach}`
+// );
+
+console.log(greeting);
