@@ -250,10 +250,10 @@ width, etc. */
     flex-wrap: wrap;
     justify-content: center;
   }
-  .product-card, p{
+  .product-card, .intro-text{
     max-width: 40%;
   }
-  p{
+  .intro-text{
     align-self: flex-start;
   }
 }
@@ -262,17 +262,6 @@ width, etc. */
 /* Media Query Desktop */
 /* --- */
 @media (min-width: 900px){
-  .card-section{
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .product-card, p{
-    max-width: 40%;
-  }
-  p{
-    align-self: flex-start;
-  }
   .--forest{
     min-width: 100vw;
     height: 40vh;
