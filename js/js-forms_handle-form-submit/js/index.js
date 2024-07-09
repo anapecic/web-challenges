@@ -7,6 +7,9 @@ form.addEventListener("submit", (event) => {
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
   console.log(data);
+  console.log(
+    Number(event.target.age.value) + Number(event.target.badness.value)
+  );
   event.target.reset();
   event.target.elements.firstName.focus();
 });
