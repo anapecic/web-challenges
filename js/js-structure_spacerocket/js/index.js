@@ -1,0 +1,24 @@
+import { initialize } from "./controls.js";
+import { loadPayload } from "./core/load.js";
+import { NFSAT, FISHSAT } from "./payload/satellites.js";
+import { rocket } from "./core/rocket.js";
+import { getRocket } from "./core/rocket.js";
+import { fuel } from "./core/fuel.js";
+import { countdown } from "./core/countdown.js";
+import { liftoff } from "./core/liftoff.js";
+import { deployPayload } from "./core/deploy.js";
+import { launch } from "./core/protocol.js";
+
+console.clear();
+initialize();
+loadPayload(NFSAT, FISHSAT);
+getRocket(rocket);
+fuel();
+countdown();
+countdown();
+countdown();
+countdown();
+countdown();
+liftoff();
+deployPayload();
+launch();
