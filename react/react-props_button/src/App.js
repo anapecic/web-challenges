@@ -2,12 +2,21 @@ import React from "react";
 import "./styles.css";
 
 export default function App() {
-  return <Button color="red" text="first Button" onButton={handleClick} />;
+  return (
+    <div>
+      <Button color="red" text="first Button" onButton={handleClick} disabled />
+      <Button color="red" text="first Button" onButton={handleClick} />
+    </div>
+  );
 }
 
-function Button({ color, text, onButton }) {
+function Button({ color, text, onButton, disabled }) {
   return (
-    <button style={{ backgroundColor: color }} onClick={onButton}>
+    <button
+      style={{ backgroundColor: color }}
+      onClick={onButton}
+      disabled={disabled}
+    >
       {text}
     </button>
   );
