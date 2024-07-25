@@ -10,3 +10,13 @@ export function D6Button({ onHandleRoll, currentRollValue }) {
     </button>
   );
 }
+
+// child component - button
+// button component: onClick
+// onClick = {onHandleClick}
+// onHandleClick muss in Props von Button Component
+
+//parent component - App.js
+// im component aufruf: müssen props vorkommen
+// in return/ im Element: funktion "onHandle.." und weitere props
+// definieren der props
