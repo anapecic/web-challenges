@@ -52,7 +52,7 @@ function App() {
     setEntries([{ id: uid(), date, ...newEntry }, ...entries]);
   }
 
-  function handleToggleFavorite(id) {
+  function handleToggleFavorite(id, event) {
     setEntries(
       entries.map((entry) =>
         entry.id === id ? { ...entry, isFavorite: !entry.isFavorite } : entry
