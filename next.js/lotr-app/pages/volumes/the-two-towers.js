@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const data = volumes.find(({ slug }) => slug === "the-two-towers");
+const index = volumes.findIndex(({ slug }) => slug === "the-two-towers");
 
 export default function TowersPage() {
   console.log(data);
@@ -19,9 +20,11 @@ export default function TowersPage() {
       </ul>
       <Image alt={data.title} src={data.cover} width={140} height={230} />
       <br />
-      <Link href="../volumes/the-return-of-the-king">Next Volume</Link>
+      <Link href={`../volumes/${volumes[index + 1].slug}`}>Next Volume</Link>
       <br />
-      <Link href="../volumes/the-fellowship-of-the-ring">Previous Volume</Link>
+      <Link href={`../volumes/${volumes[index - 1].slug}`}>
+        Previous Volume
+      </Link>
     </>
   );
 }

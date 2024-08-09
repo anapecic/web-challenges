@@ -3,6 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 const data = volumes.find(({ slug }) => slug === "the-fellowship-of-the-ring");
+const index = volumes.findIndex(
+  ({ slug }) => slug === "the-fellowship-of-the-ring"
+);
 
 export default function FellowshipPage() {
   console.log(data);
@@ -19,7 +22,7 @@ export default function FellowshipPage() {
       </ul>
       <Image alt={data.title} src={data.cover} width={140} height={230} />
       <br />
-      <Link href="../volumes/the-two-towers">Next Volume</Link>
+      <Link href={`../volumes/${volumes[index + 1].slug}`}>Next Volume</Link>
     </>
   );
 }
