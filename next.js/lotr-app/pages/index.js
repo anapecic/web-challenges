@@ -4,9 +4,9 @@ import { useRouter } from "next/router";
 
 export default function HomePage() {
   const router = useRouter();
-  const allSlugs = volumes.map((volume) => {
-    return volume.slug;
-  });
+  // const allSlugs = volumes.map((volume) => {
+  //   return volume.slug;
+  // });
 
   function getRandomElement(array) {
     return array[Math.floor(Math.random() * array.length)];
@@ -27,7 +27,9 @@ export default function HomePage() {
         })}
       </ul>
       <button
-        onClick={() => router.push(`/volumes/${getRandomElement(allSlugs)}`)}
+        onClick={() =>
+          router.push(`/volumes/${getRandomElement(volumes).slug}`)
+        }
       >
         Random Volume
       </button>
