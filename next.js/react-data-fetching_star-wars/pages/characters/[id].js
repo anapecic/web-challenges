@@ -9,7 +9,7 @@ export default function Character() {
   const router = useRouter();
   const dynamicId = router.query.id;
   const {
-    data: cha,
+    data: character,
     error,
     isLoading,
   } = useSWR(`https://swapi.dev/api/people/${dynamicId}`, fetcher);
@@ -21,10 +21,10 @@ export default function Character() {
     <Layout>
       <Card
         id={dynamicId}
-        name={cha.name}
-        height={cha.height}
-        eyeColor={cha.eye_color}
-        birthYear={cha.birth_year}
+        name={character.name}
+        height={character.height}
+        eyeColor={character.eye_color}
+        birthYear={character.birth_year}
       />
     </Layout>
   );
